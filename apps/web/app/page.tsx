@@ -1,8 +1,15 @@
-import { LIGHT_THEME, DARK_THEME } from "@/utils/colors"
-
+import SearchBox from "component/searchbox"
 
 export default function Page() {
   return (
-    <div>Hello World</div>
+    <div>
+      <div 
+        className="w-full h-16 flex items-center border-b px-2" 
+        style={{borderColor: 'var(--border)'}}>
+        
+        <div className="text-2xl text-center">TEST</div>
+        <SearchBox/>
+      </div>
+    </div>
   )
 }
