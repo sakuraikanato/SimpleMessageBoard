@@ -1,7 +1,11 @@
 {
   "name": "api",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "drizzle:generate": "bun drizzle-kit generate",
+        "drizzle:migrate": "bun drizzle-kit migrate",
+        "drizzle:push": "bun drizzle-kit push",
+        "drizzle:drop": "bun drizzle-kit drop"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
