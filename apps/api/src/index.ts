@@ -1,19 +1,19 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import dotenv from 'dotenv'
+import { thread, user } from './routes'
 
-const app = new Hono()
 dotenv.config({path: "@/.env", debug: true})
+const app = new Hono()
 
-app.use("*", cors({
+.use("*", cors({
   origin: "*"
 }))
 
-const route = app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+.route('/users', user)
+.route('/threads', thread)
 
-export type AppType = typeof route;
+export type AppType = typeof app;
 export default {
   fetch: app.fetch,
   port: process.env.API_PORT
