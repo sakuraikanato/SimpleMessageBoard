@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "back/*": ["../api/*"]
+      "back/*": ["../api/*"],
+      "component/*": ["./component/*"]
     }
   },
   "include": [
