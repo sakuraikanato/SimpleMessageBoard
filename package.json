@@ -4,7 +4,11 @@
     "scripts": {
         "dev:all": "bun run --parallel --filter='*' dev",
         "dev:web": "bun run --filter web dev",
-        "dev:api": "bun run --filter api dev"
+        "dev:api": "bun run --filter api dev",
+        "drizzle:generate": "bun --filter 'api' drizzle-kit generate",
+        "drizzle:migrate": "bun --filter 'api' drizzle-kit migrate",
+        "drizzle:push": "bun --filter 'api' drizzle-kit push",
+        "drizzle:drop": "bun --filter 'api' drizzle-kit drop"
     },
     "workspaces": [
         "apps/*"
