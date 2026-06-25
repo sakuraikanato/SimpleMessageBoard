@@ -7,7 +7,7 @@
         "dev:api": "bun run --filter api dev",
         "drizzle:generate": "bun --filter 'api' drizzle-kit generate",
         "drizzle:migrate": "bun --filter 'api' drizzle-kit migrate",
-            "drizzle:push": "bun --filter 'api' drizzle-kit push",
+        "drizzle:push": "bun --filter 'api' drizzle-kit push",
         "drizzle:drop": "bun --filter 'api' drizzle-kit drop"
     },
     "workspaces": [
