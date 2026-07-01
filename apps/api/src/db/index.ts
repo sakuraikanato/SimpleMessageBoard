@@ -13,6 +13,4 @@ export const connection = await mysql.createConnection({
 	port: Number(process.env.DB_PORT),
 });
 
-const db = drizzle(connection, { schema, mode: "default" });
-
-export default db;
+export const db = drizzle(connection, { schema, mode: "default" });

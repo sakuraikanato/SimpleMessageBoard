@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import { thread, user } from './routes'
 import { hasCauseCode } from './utils'
 import { DrizzleError } from 'drizzle-orm'
+import { auth } from './utils/auth'
 
 dotenv.config({path: "@/.env", debug: true})
 const app = new Hono()
@@ -11,6 +12,7 @@ const app = new Hono()
 .use("*", cors({
   origin: "*"
 }))
+.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw))
 
 .route('/users', user)
 .route('/threads', thread)

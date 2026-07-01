@@ -1,3 +1,3 @@
-export * from "./users"
+export * from "./auth-schema"
 export * from "./threads"
 export * from "./messages"

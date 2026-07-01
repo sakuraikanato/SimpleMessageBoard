@@ -4,6 +4,7 @@ type ResErrType = {
     }
 }
 
+// drizzleのエラーで、err.cause.codeが存在し、string型であることを確認する関数
 export function hasCauseCode(err: unknown): err is ResErrType {
     if (typeof err !== 'object' || err === null) return false;
     if (!('cause' in err)) return false;

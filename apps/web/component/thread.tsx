@@ -10,7 +10,7 @@ export default function Thread({id, title, short_content}: Props) {
     const router = useRouter();
     return (
         <div 
-            className="w-4xl mx-auto my-4 pb-4 px-4 overflow-hidden border-b cursor-pointer group"
+            className="w-8/10 mx-auto my-4 pb-4 px-4 overflow-hidden border-b cursor-pointer group"
             onClick={() => {router.push(`${id}`)}}
             style={{
                 borderColor: "var(--border)"
